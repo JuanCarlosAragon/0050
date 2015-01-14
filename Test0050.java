@@ -57,4 +57,23 @@ public class Test0050
         }
         return resultado;
     }
+    /**
+     * Calcula raices cuadradas enteras
+     */
+    public int raizCuadrada(int num){
+        int contador = 1;
+        int resultado = -1;
+        if(num>0 && num<= 1000){
+            while(contador<32){
+               if(potencia(contador,2) == num){
+                resultado = contador;
+               }
+               contador++;
+            }
+        }
+        if(resultado == -1){
+            System.out.println("ERROR, el resultado de la raíz no es exacta");
+        }
+        return resultado;
+    }
 }
